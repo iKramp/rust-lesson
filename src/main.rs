@@ -22,7 +22,8 @@ fn main() {
         canvas.clear();
         canvas.set_draw_color(sdl2::pixels::Color::RGB(100, 100, 100));
         let draw_rect = sdl2::rect::Rect::new(0, 0, 20, 20);
-        canvas.fill_rect(draw_rect);
+        #[allow(unused_must_use)]
+        let _ = canvas.fill_rect(draw_rect);
 
         canvas.present();
     }
